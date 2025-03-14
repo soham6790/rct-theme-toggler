@@ -3,7 +3,7 @@ import useTheme from '../context/Theme';
 
 function ThemeButton() {
 
-    const {themeMode,ligthTheme,darkTheme} = useTheme();
+    const {themeMode,lightTheme,darkTheme} = useTheme();
 
     const onChangeBtn = (e) => {
         const darkModeStatus = e.currentTarget.checked;
@@ -11,12 +11,11 @@ function ThemeButton() {
             darkTheme();
         }
         else {
-            ligthTheme();
+            lightTheme();
         }
 
     }
 
-    
     return (
         <label className="relative inline-flex items-center cursor-pointer">
             <input
@@ -32,4 +31,4 @@ function ThemeButton() {
     );
 }
 
-export default ThemeButton
+export default ThemeButton;
